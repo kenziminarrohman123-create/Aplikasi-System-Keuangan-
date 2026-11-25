@@ -2,14 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Wallet;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\DB;
-use App\Models\Wallet;
-use App\Models\Transaction;
-
-/** @var \App\Models\User $user */
-$user = Auth::user();
 
 class WalletController extends Controller
 {
@@ -44,5 +39,16 @@ class WalletController extends Controller
         ]);
 
         return redirect()->route('wallets.index')->with('success', 'Dompet berhasil ditambahkan!');
+    }
+
+    public function destroy(Wallet $wallet)
+    {
+        if ($wallet->user_id !== Auth::id()) {
+            abort(403);
+        }
+
+        $wallet->delete();
+
+        return redirect()->route('wallets.index')->with('success', 'Dompet berhasil dihapus.');
     }
 }
