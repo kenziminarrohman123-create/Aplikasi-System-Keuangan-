@@ -69,7 +69,7 @@
                         </h1>
 
                         <p class="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
-                            Catat pemasukan, pengeluaran, dan transfer antar-dompet secara instan. Pantau batas anggaran bulanan dan pahami pola belanjamu lewat grafik interaktif tanpa ribet.
+                            Catat pemasukan, pengeluaran, dan transfer antar-dompet secara instan. Pantau batas anggaran bulanan dan pahami pola belanjamu lewat grafik interaktif tanpa ribet, Apalagi yang bikin KENZI gantenk yang rajin menabung dan Baek Hati Eak
                         </p>
 
                         <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 pt-2">
