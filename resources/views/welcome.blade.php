@@ -141,7 +141,7 @@
                 <div class="text-center max-w-2xl mx-auto mb-16">
                     <h2 class="text-3xl font-bold text-slate-900">Dirancang untuk Kejelasan Finansial</h2>
                     <p class="text-slate-600 mt-3 text-sm sm:text-base">
-                        Semua yang kamu butuhkan untuk memisahkan pos keuangan, mencegah pemborosan, dan melihat tren arus kas secara akurat.
+                        Semua yang kamu butuhkan untuk memisahkan pos keuangan, mencegah pemborosan, dan melihat tren arus kas secara akurat, Apalagi yang bikin KENZI gantenk yang rajin menabung dan Baek Hati Eak
                     </p>
                 </div>
 
