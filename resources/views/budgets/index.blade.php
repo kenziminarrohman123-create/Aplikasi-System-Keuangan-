@@ -46,9 +46,8 @@
                         </div>
 
                         <div>
-                            <label class="block text-sm font-medium text-gray-700">Batas Maksimal (Rp)</label>
-                            <input type="number" name="amount_limit" min="1000" placeholder="500000" required
-                                class="mt-1 block w-full rounded-lg border-gray-300 text-sm">
+                            <label class="block text-sm font-medium text-gray-700">Batas Maksimal</label>
+                            <x-currency-input name="amount_limit" placeholder="500,000" :required="true" />
                         </div>
 
                         <button type="submit" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-2 px-4 rounded-lg text-sm transition">

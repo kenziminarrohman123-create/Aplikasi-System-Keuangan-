@@ -43,9 +43,8 @@
                         </div>
 
                         <div>
-                            <label class="block text-sm font-medium text-gray-700">Saldo Awal (Rp)</label>
-                            <input type="number" name="balance" value="0" min="0" required
-                                class="mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 text-sm">
+                            <label class="block text-sm font-medium text-gray-700">Saldo Awal</label>
+                            <x-currency-input name="balance" :allow-zero="true" placeholder="0" :required="true" />
                         </div>
 
                         <div>

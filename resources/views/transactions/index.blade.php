@@ -94,9 +94,8 @@
 
                             <!-- Nominal -->
                             <div>
-                                <label class="block text-sm font-medium text-gray-700">Nominal (Rp)</label>
-                                <input type="number" name="amount" min="1" placeholder="50000" required
-                                    class="mt-1 block w-full rounded-lg border-gray-300 shadow-sm text-sm">
+                                <label class="block text-sm font-medium text-gray-700">Nominal</label>
+                                <x-currency-input name="amount" placeholder="50,000" :required="true" />
                             </div>
 
                             <!-- Tanggal -->
