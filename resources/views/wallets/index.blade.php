@@ -156,28 +156,35 @@
                         </button>
                     </form>
                 </div>
-
                 <!-- Daftar Kartu Dompet -->
                 <div class="md:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-4 h-fit">
                     @forelse ($wallets as $wallet)
-                        <div class="rounded-xl p-5 text-white shadow-md relative flex flex-col justify-between min-h-[140px]"
+                        <div onclick="window.location='{{ route('wallets.show', $wallet) }}'"
+                             class="rounded-xl p-5 text-white shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all cursor-pointer relative flex flex-col justify-between min-h-[150px]"
                              style="background-color: {{ $wallet->color }};">
                             <div class="flex justify-between items-start">
                                 <div>
                                     <span class="text-xs uppercase tracking-wider opacity-80">{{ $wallet->type }}</span>
                                     <h4 class="text-lg font-bold">{{ $wallet->name }}</h4>
                                 </div>
-                                <form action="{{ route('wallets.destroy', $wallet) }}" method="POST" onsubmit="return confirm('Hapus dompet ini? Semua transaksi di dalamnya juga akan terhapus.')">
+                                <form action="{{ route('wallets.destroy', $wallet) }}" method="POST"
+                                      onclick="event.stopPropagation()"
+                                      onsubmit="return confirm('Hapus dompet ini? Semua transaksi di dalamnya juga akan terhapus.')">
                                     @csrf
                                     @method('DELETE')
-                                    <button type="submit" class="text-white/70 hover:text-white text-xs bg-black/20 px-2 py-1 rounded">
+                                    <button type="submit" class="text-white/80 hover:text-white text-xs bg-black/20 hover:bg-black/30 px-2.5 py-1 rounded transition">
                                         Hapus
                                     </button>
                                 </form>
                             </div>
-                            <div class="mt-6">
-                                <span class="text-xs opacity-80 block">Saldo Saat Ini</span>
-                                <span class="text-2xl font-bold">Rp {{ number_format($wallet->balance, 0, ',', '.') }}</span>
+                            <div class="mt-6 flex items-end justify-between">
+                                <div>
+                                    <span class="text-xs opacity-80 block">Saldo Saat Ini</span>
+                                    <span class="text-2xl font-bold">Rp {{ number_format($wallet->balance, 0, ',', '.') }}</span>
+                                </div>
+                                <span class="text-xs bg-white/20 px-2.5 py-1 rounded-lg font-medium">
+                                    Riwayat →
+                                </span>
                             </div>
                         </div>
                     @empty
